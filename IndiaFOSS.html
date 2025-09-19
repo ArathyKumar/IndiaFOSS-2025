@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- ISSUE: Missing lang attribute (Perceivable) -->
+  <title>IndiaFOSS – Open Source Revolution</title>
+  <!-- Importing Red Hat Display and Red Hat Text -->
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&family=Red+Hat+Text&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Red Hat Text', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #555555; /* Slightly low contrast for some text */
+      line-height: 1.6;
+    }
+    a {
+      color: #6b7280; /* Muted blue-gray */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* ISSUE: Removed focus outlines (Operable) */
+    a:focus, button:focus {
+      outline: none;
+    }
+
+    header {
+      background: #f3f4f6;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #e5e7eb;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #374151;
+    }
+    nav {
+      margin-top: 0.8rem;
+    }
+    nav a {
+      margin-right: 1.5rem;
+      font-weight: 600;
+      color: #6b7280; /* Low contrast nav links */
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .cover-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      /* ISSUE: No alt attribute (Perceivable) */
+    }
+
+    article {
+      margin-top: 2rem;
+    }
+
+    article h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      /* ISSUE: Heading starts at h2, no h1 in article (Understandable) */
+    }
+    article p.date-author {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      /* ISSUE: Ambiguous date format */
+    }
+
+    article h3, article h4  {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    article p {
+      font-size: 1.125rem;
+      margin-bottom: 1.25rem;
+      color: #4b5563;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+      color: #4b5563;
+    }
+
+    /* ISSUE: Decorative icon img with no alt */
+    .icon {
+      width: 25px;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+
+    /* Subscribe box - clickable div without keyboard support */
+    .subscribe {
+      background: #e0e7ff;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      margin: 2rem 0;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      color: #4338ca;
+      /* ISSUE: div clickable with no role or tabindex */
+    }
+
+    /* Fake button with span */
+    .fake-button {
+      display: inline-block;
+      background: #4338ca;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+      /* ISSUE: span used as button */
+    }
+
+    /* Form inputs with no labels */
+    form input[type="text"], form input[type="submit"] {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      width: 100%;
+      border-radius: 0.375rem;
+      border: 1px solid #d1d5db;
+      /* ISSUE: No labels for inputs */
+    }
+    form input[type="submit"] {
+      background-color: #4338ca;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      padding: 3rem 1rem;
+      color: #9ca3af;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 4rem;
+      /* ISSUE: no footer landmark role */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>IndiaFOSS</h1>
+    <nav>
+      <!-- ISSUE: Low contrast nav links -->
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <!-- ISSUE: No <main> or ARIA landmark -->
+  <div class="container">
+    <article>
+      <!-- ISSUE: No h1 here, heading starts with h2 -->
+      <h2>The Open Source Revolution</h2>
+      <p class="date-author">Published 09/19/25 by Jane Doe</p> <!-- Ambiguous date -->
+
+      <!-- ISSUE: Image with no alt attribute -->
+      <img src="opensource.jpg" class="cover-image">
+
+      <h4>Why Open Source Matters</h4>
+      <p>
+        FOSS has taken over many aspects of technology. Linux, for example, runs on millions of servers worldwide. The open-source model encourages collaboration and transparency, allowing developers to create software that benefits communities globally.
+      </p>
+      <p>
+        Open source software powers everything from mobile devices to major cloud platforms, empowering innovation in ways proprietary software can’t match.
+      </p>
+
+      <h3>How You Can Contribute</h3>
+      <p>
+        Getting involved with open source projects can seem daunting at first, but there are many ways to contribute, from writing documentation to coding new features.
+      </p>
+      <p>
+        FOSS projects welcome all skill levels, and many provide detailed guides on how to get started. Engaging with the community through forums and issue trackers is a great way to learn and contribute.
+      </p>
+
+      <h3>Popular Open Source Licenses</h3>
+      <ul>
+        <li>MIT License – Simple and permissive.</li>
+        <li>GNU GPL – Requires derivative works to be open source.</li>
+        <li>Apache License 2.0 – Permissive with explicit patent grant.</li>
+        <li>BSD License – Allows proprietary use with minimal restrictions.</li>
+      </ul>
+
+      <h3>Challenges Facing Open Source</h3>
+      <p>
+        Despite its successes, open source projects face hurdles including funding, maintaining contributor engagement, and ensuring security.
+      </p>
+      <p>
+        Many projects rely on volunteers and have limited resources to address bugs and vulnerabilities quickly.
+      </p>
+
+      <h3>Success Stories</h3>
+      <p>
+        Projects like Linux, Firefox, and Kubernetes demonstrate how open source can create robust, industry-leading software.
+      </p>
+      <p>
+        These projects thrive due to strong communities, transparent governance, and wide adoption.
+      </p>
+
+      <p>
+        Learn more about open collaboration <a href="https://opensource.guide">here</a>. <!-- Non-descriptive link -->
+        <img src="https://img.icons8.com/ios-filled/50/000000/source-code.png" class="icon" alt="">
+        <!-- Decorative icon with no alt -->
+      </p>
+
+      <!-- ISSUE: Clickable div without keyboard support -->
+      <div class="subscribe" onclick="alert('Thanks for subscribing!')">
+        Subscribe to newsletter
+      </div>
+
+      <!-- ISSUE: span used as button -->
+      <span tabindex='0' class="fake-button">Share</span>
+
+      <!-- ISSUE: Form inputs without labels -->
+      <form>
+        <input type="text" placeholder="Your email" />
+        <input type="submit" value="Submit" />
+      </form>
+    </article>
+  </div>
+
+  <footer>
+    &copy; 2025 IndiaFOSS. All rights reserved.
+  </footer>
+
+</body>
+</html>
